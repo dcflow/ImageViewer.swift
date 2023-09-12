@@ -101,13 +101,13 @@ public class ImageCarouselViewController:UIPageViewController, ImageViewerTransi
     private func addNavBar() {
         // Add Navigation Bar
         let closeBarButton = UIBarButtonItem(
-            title: NSLocalizedString("Close", comment: "Close button title"),
-            style: .plain,
+            title: NSLocalizedString("Done", comment: "Close button title"),
+            style: .done,
             target: self,
             action: #selector(dismiss(_:)))
         
-        navItem.leftBarButtonItem = closeBarButton
-        navItem.leftBarButtonItem?.tintColor = theme.tintColor
+        navItem.rightBarButtonItem = closeBarButton
+        navItem.rightBarButtonItem?.tintColor = theme.tintColor
         navBar.alpha = 0.0
         navBar.items = [navItem]
         navBar.insert(to: view)
