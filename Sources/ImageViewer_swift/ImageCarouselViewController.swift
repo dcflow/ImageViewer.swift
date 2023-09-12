@@ -108,7 +108,7 @@ public class ImageCarouselViewController:UIPageViewController, ImageViewerTransi
         
         navItem.rightBarButtonItem = closeBarButton
         navItem.rightBarButtonItem?.tintColor = .white
-        navBar.alpha = 0.0
+        navBar.alpha = 1.0
         navBar.items = [navItem]
         navBar.insert(to: view)
     }
