@@ -222,3 +222,15 @@ extension ImageCarouselViewController:UIPageViewControllerDataSource {
             imageLoader: vc.imageLoader)
     }
 }
+
+extension UIImage {
+    
+    static func clear() -> UIImage {
+        let size = CGSize(width: 10, height: 10)
+        
+        return UIGraphicsImageRenderer(size: size).image { context in
+            UIColor.clear.setFill()
+            context.fill(CGRect(origin: .zero, size: size))
+        }
+    }
+}
